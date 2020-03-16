@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static "backend/style.css" %}" />
+    <script src="{% static "backend/creation.js" %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Deadlines Tracker</h1>
+    </div>
+
+    <form action="/backend/creation/" method="post">
+      {% csrf_token %}
+      <div class="creation">
+        <div class="creation center ident">
+          <p>I am a:</p>
+
+          <input type="radio" id="student" name="ident" value="student" required/>
+          <label for="student">student</label><br />
+          <input type="radio" id="professor" name="ident" value="professor" />
+          <label for="professor">professor</label><br />
+        </div>
+        <div class="creation center">
+          <label for="first"><b>First Name</b></label>
+          <input type="text" placeholder="" name="first" required />
+          <label for="last"><b>Last Name</b></label>
+          <input type="text" placeholder="" name="last" required />
+        </div>
+
+        <div class="creation center">
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required />
+        </div>
+
+        <div class="creation center">
+          <label for="psw"><b>Password</b></label>
+          <div class="ident">
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            id="psw"
+            required
+          />
+          <input type="checkbox" onclick="showPassword('psw')" />Show
+        </div>
+        </div>
+
+        <div class="creation center">
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <div class="ident">
+
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            name="psw-repeat"
+            id="repeat"
+            required
+          />
+
+          <input type="checkbox" onclick="showPassword('repeat')" />Show
+          </div>
+
+          <hr />
+        </div>
+
+        <div class="creation center">
+          <div
+            class="g-recaptcha"
+            data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"
+          ></div>
+        </div>
+
+        <div class="creation center">
+          <button class="auth" type="submit" class="registerbtn">
+            Register
+          </button>
+        </div>
+
+        <!-- <p>Already have an account? <a href="index.html">Sign in</a>.</p> -->
+      </div>
+    </form>
+  </body>
+</html>

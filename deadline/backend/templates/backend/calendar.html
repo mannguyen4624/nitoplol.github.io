@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -13,20 +14,19 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
-    <link href="node_modules/@fullcalendar/core/main.css" rel="stylesheet" />
-    <link href="node_modules/@fullcalendar/daygrid/main.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static "backend/style.css" %}" />
+    <link href="{% static "backend/node_modules/@fullcalendar/core/main.css" %}" rel="stylesheet" />
+    <link href="{% static "backend/node_modules/@fullcalendar/daygrid/main.css" %}" rel="stylesheet" />
     <link
-      href="node_modules/@fullcalendar/timegrid/main.css"
+      href="{% static "backend/node_modules/@fullcalendar/timegrid/main.css" %}"
       rel="stylesheet"
     />
-    <link href="node_modules/@fullcalendar/list/main.css" rel="stylesheet" />
+    <link href="{% static "backend/node_modules/@fullcalendar/list/main.css" %}" rel="stylesheet" />
 
-    <script src="node_modules/@fullcalendar/core/main.js"></script>
-    <script src="node_modules/@fullcalendar/daygrid/main.js"></script>
-    <script src="node_modules/@fullcalendar/timegrid/main.js"></script>
-    <script src="node_modules/@fullcalendar/list/main.js"></script>
+    <script src="{% static "backend/node_modules/@fullcalendar/core/main.js" %}"></script>
+    <script src="{% static "backend/node_modules/@fullcalendar/daygrid/main.js" %}"></script>
+    <script src="{% static "backend/node_modules/@fullcalendar/timegrid/main.js" %}"></script>
+    <script src="{% static "backend/node_modules/@fullcalendar/list/main.js" %}"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
@@ -58,9 +58,9 @@
     </div>
 
     <div class="topnav">
-      <a href="classes.html">Classes</a>
+      <a href="/backend/classes/"> Classes</a>
       <a href="#">Profile</a>
-      <a class="quit" href="#">Quit</a>
+      <a class="quit" href="/backend/">Quit</a>
     </div>
 
     <div id="calendar" class="column left"></div>

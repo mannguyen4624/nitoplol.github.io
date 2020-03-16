@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="{% static "backend/style.css"%}" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -21,9 +22,9 @@
     </div>
 
     <div class="topnav">
-      <a href="calendar.html">Calendar</a>
+      <a href="/backend/calendar/">Calendar</a>
       <a href="#">Profile</a>
-      <a class="quit" href="#">Quit</a>
+      <a class="quit" href="/backend/">Quit</a>
     </div>
 
     <div class="classes-heading">
@@ -33,13 +34,9 @@
     <div class="classlist"></div>
 
     <div class="classes-heading">
-      <button id="addclass">Add Class</button>
+      <form action="/backend/addclass/">
+        <input type="submit" value="Add Class" />
+      </form>
     </div>
-
-    <script>
-      document.getElementById("addclass").onclick = function() {
-        location.href = "addClassStudent.html";
-      };
-    </script>
   </body>
 </html>

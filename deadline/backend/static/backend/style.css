@@ -91,7 +91,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for identification buttons */
-button.ident {
+button.auth {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -119,18 +119,6 @@ img.avatar {
   border-radius: 50%;
 }
 
-/* Add padding to containers */
-.container {
-  float: left;
-  position: relative;
-  width: 30%;
-  padding: 16px;
-}
-
-.container.left {
-  width: 30%;
-}
-
 /* The "Forgot password" text */
 span.psw {
   float: left;
@@ -146,4 +134,21 @@ span.psw {
   .cancelbtn {
     width: 100%;
   }
+}
+
+.creation {
+  display: flex;
+  flex-flow: column;
+}
+
+.creation.center {
+  align-self: center;
+  width: 30%;
+}
+
+.ident {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="{% static "backend/style.css" %}" />
   </head>
   <body>
     <div class="header">
       <h1>Deadlines Tracker</h1>
     </div>
 
-    <form action="action_page.php" method="post">
+    <form action="/backend/login/" method="post">
+      {% csrf_token %}
 
       <div class="container left">
 
@@ -25,9 +27,9 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required />
         <span class="psw">Click <a href="#">here</a> if you forgot your password.</span>
-        <span class="psw">Click <a href="creation.html">here</a> if you need to create an account.</span>
+        <span class="psw">Click <a href="/backend/creation/">here</a> if you need to create an account.</span>
 
-        <button class='button ident' type="submit">Log In</button>
+        <button class='button auth' type="submit">Log In</button>
         <!-- <label> -->
           <!-- <input type="checkbox" checked="checked" name="remember" /> Remember me -->
         <!-- </label> -->

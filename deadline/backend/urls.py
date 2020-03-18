@@ -9,4 +9,5 @@ urlpatterns = [
     path('calendar/', views.handle_calendar, name='handle_calendar'),
     path('creation/', views.handle_account_creation, name='handle_account_creation'),
     path('addclass/', views.handle_adding_class, name='handle_adding_class'),
+    path('forgot/', views.handle_forgot, name='handle_forgot'),
 ]

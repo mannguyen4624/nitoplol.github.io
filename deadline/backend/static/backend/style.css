@@ -1,5 +1,5 @@
 .header {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   text-align: center;
   padding: 1px;
 }
@@ -38,17 +38,20 @@
 }
 
 .column.left {
-  width: 80%;
+  width: 70%;
 }
 
 .column.right {
+  width: 30%;
+}
+
+/* .column.right {
   position: relative;
   text-align: center;
-  width: 30%;
-  height: 5in;
+  width: 10%;
   top: 50px;
   border: 1px solid black;
-}
+} */
 
 /* Clear floats after the columns */
 .row:after {
@@ -76,12 +79,13 @@
 }
 
 /* Bordered form */
-form {
+/* form {
   border: 3px solid #f1f1f1;
-}
+} */
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -92,13 +96,17 @@ input[type=text], input[type=password] {
 
 /* Set a style for identification buttons */
 button.auth {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+}
+
+button.auth.cancel {
+  background-color: rgb(242, 57, 57);
 }
 
 /* Add a hover effect for buttons */
@@ -151,4 +159,10 @@ span.psw {
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.sclass {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
 }

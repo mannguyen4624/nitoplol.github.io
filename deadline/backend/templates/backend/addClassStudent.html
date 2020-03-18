@@ -14,6 +14,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+
   </head>
 
   <body>
@@ -22,10 +23,43 @@
     </div>
 
     <div class="topnav">
-      <a href="/backend/calendar/">Calendar</a>
-      <a href="/backend/classes">Classes</a>
+      <a href="/calendar/">Calendar</a>
+      <a href="/classes">Classes</a>
       <a href="#">Profile</a>
-      <a class="quit" href="/backend/">Quit</a>
+      <a class="quit" href="/">Quit</a>
     </div>
+
+    <h3>Choose Class</h3>
+
+    <form action="/addstudentclass/">
+      <div class="sclass">
+        <select name="subject" id="subject" required>
+          <!-- use templating to query db and add options for each subject  -->
+          <option value="Select">Select...</option>
+          <option value="IS">IS</option>
+          <option value="CS">CS</option>
+        </select>
+
+        <select name="course" id="course" required>
+          <option value="Select">Select...</option>
+          <!-- use templating to query db and add options for each course in previous subject -->
+          <option value="3700">3700</option>
+          <option value="4500">4500</option>
+        </select>
+
+        <select name="section" id="section" required>
+          <option value="Select">Select...</option>
+          <!-- use templating to query db and add sections for the previous course -->
+          <option value="1">Section 1</option>
+          <option value="2">Section 2</option>
+          <!-- change calendar on selection -->
+        </select>
+
+        <script src="{% static "backend/addClassStudent.js" %}"></script>
+
+
+        <input type="submit" value="Add Class" />
+      </div>
+    </form>
   </body>
 </html>

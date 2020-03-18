@@ -14,7 +14,7 @@
       <h1>Deadlines Tracker</h1>
     </div>
 
-    <form action="/backend/login/" method="post">
+    <form action="/login/" method="post">
       {% csrf_token %}
 
       <div class="container left">
@@ -26,8 +26,8 @@
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required />
-        <span class="psw">Click <a href="#">here</a> if you forgot your password.</span>
-        <span class="psw">Click <a href="/backend/creation/">here</a> if you need to create an account.</span>
+        <p class="psw">Click <a href="/forgot/">here</a> if you forgot your password.</p>
+        <p class="psw">Click <a href="/creation/">here</a> if you need to create an account.</p>
 
         <button class='button auth' type="submit">Log In</button>
         <!-- <label> -->

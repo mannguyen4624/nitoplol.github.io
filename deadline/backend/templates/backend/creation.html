@@ -16,7 +16,7 @@
       <h1>Deadlines Tracker</h1>
     </div>
 
-    <form action="/backend/creation/" method="post">
+    <form action="/creation/" method="post">
       {% csrf_token %}
       <div class="creation">
         <div class="creation center ident">
@@ -82,6 +82,10 @@
           <button class="auth" type="submit" class="registerbtn">
             Register
           </button>
+        </div>
+
+        <div class='creation center'>
+          <a href="/">Cancel</a>
         </div>
 
         <!-- <p>Already have an account? <a href="index.html">Sign in</a>.</p> -->
